@@ -4,7 +4,6 @@ import joblib
 
 st.set_page_config(
     page_title="JAMB Student Cluster",
-    page_icon="🎓",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -12,20 +11,13 @@ st.set_page_config(
 
 @st.cache_resource
 def load_model_and_preprocessor():
-    st.write("Loading model files...")
     model = joblib.load("model.pkl")
     preprocessor = joblib.load("preprocessor.pkl")
-    st.write("Model loaded")
     return model, preprocessor
 
-
-st.write("App started successfully")
 model, preprocessor = load_model_and_preprocessor()
 
-# ────────────────────────────────────────────────
-# Header – Title & Description
-# ────────────────────────────────────────────────
-st.title("🎓 JAMB Student Cluster")
+st.title("JAMB Students Result Cluster")
 
 st.markdown("""
 This app groups students into clusters based on:  
@@ -133,5 +125,5 @@ if st.button("Find Cluster", type="primary"):
 
 
 st.markdown("---")
-st.caption("Built by Godwin • Abuja, Nigeria • January 2026")
+st.caption("Built by Adaafu• January 2026")
 st.caption("Clustering model trained with K-Means • Data-driven student profiles")
