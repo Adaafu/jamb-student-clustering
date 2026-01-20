@@ -11,9 +11,15 @@ st.set_page_config(
 
 @st.cache_resource
 def load_model_and_preprocessor():
-    model = joblib.load("model.pkl")
-    preprocessor = joblib.load("preprocessor.pkl")
-    return model, preprocessor
+    st.write("Loading model and preprocessor...")  # debug message
+    try:
+        model = joblib.load('model.pkl')
+        preprocessor = joblib.load('preprocessor.pkl')
+        st.write("Model and preprocessor loaded successfully")
+        return model, preprocessor
+    except Exception as e:
+        st.error(f"Failed to load model/preprocessor: {str(e)}")
+        raise  # re-raise so logs show full traceback
 
 model, preprocessor = load_model_and_preprocessor()
 
@@ -125,5 +131,5 @@ if st.button("Find Cluster", type="primary"):
 
 
 st.markdown("---")
-st.caption("Built by Adaafu• January 2026")
+st.caption("Built by Adaafu • January 2026")
 st.caption("Clustering model trained with K-Means • Data-driven student profiles")
