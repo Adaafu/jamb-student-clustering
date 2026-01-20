@@ -12,14 +12,14 @@ st.set_page_config(
 
 @st.cache_resource
 def load_model_and_preprocessor():
-    try:
-        model = joblib.load('model.pkl')
-        preprocessor = joblib.load('preprocessor.pkl')
-        return model, preprocessor
-    except FileNotFoundError:
-        st.error("Model files not found. Please run train_clustering_model.py first.")
-        st.stop()
+    st.write("Loading model files...")
+    model = joblib.load("model.pkl")
+    preprocessor = joblib.load("preprocessor.pkl")
+    st.write("Model loaded")
+    return model, preprocessor
 
+
+st.write("App started successfully")
 model, preprocessor = load_model_and_preprocessor()
 
 # ────────────────────────────────────────────────
