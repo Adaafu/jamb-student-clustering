@@ -5,7 +5,6 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
-import matplotlib.pyplot as plt
 
 df = pd.read_csv('jamb_exam_results.csv')
 
