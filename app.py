@@ -21,9 +21,9 @@ st.title("JAMB Students Result Cluster")
 
 st.markdown("""
 This app groups students into clusters based on:  
-• **Study habits** (hours per week, assignments, attendance)  
-• **School environment** (type, location, teacher quality)  
-• **Family & support background** (socioeconomic status, parent involvement, education, IT knowledge, extra tutorials)
+• **Study Habits** (hours per week, assignments, attendance)  
+• **School Environment** (type, location, teacher quality)  
+• **Family & Support Background** (socioeconomic status, parent involvement, education, IT knowledge, extra tutorials)
 
 Select from the characteristics below to see which cluster best matches the profile.
 """)
@@ -32,34 +32,34 @@ st.markdown("---")
 
 cluster_descriptions = {
     0: "Low Effort Group: "
-       "Study_Hours_Per_Week = 10.52, "
-       "Assignments_Completed = 1.10, "
-       "Attendance_Rate = 75.77%, "
-       "Teacher_Quality = 2.25, ",
+       "Study Hours Per Week < 10, "
+       "Assignments Completed < 2, "
+       "Attendance Rate < 60%, "
+       "Teacher Quality below average, ",
 
     1: "Moderate Effort Group: "
-       "Study_Hours_Per_Week = 25.59, "
-       "Assignments_Completed = 2.33, "
-       "Attendance_Rate = 76.21%, "
-       "Teacher_Quality = 2.09, ",
+       "Study Hours Per Week = 20-30, "
+       "Average Number of Assignments Completed, "
+       "Attendance Rate = 60% ~ 80%, "
+       "Average Teacher Quality, ",
 
     2: "High Committment Group: "
-       "Study_Hours_Per_Week = 31.14, "
-       "Assignments_Completed = 3.42, "
-       "Attendance_Rate = 88.95%, "
-       "Teacher_Quality = 2.87, ",
+       "Study Hours Per Week > 30, "
+       "Assignments Completed > 3, "
+       "Attendance Rate > 80%, "
+       "Teacher Quality above average, ",
 
     3: "Higher Teacher-Supported Group: "
-       "Study_Hours_Per_Week = 18.36, "
-       "Assignments_Completed = 1.40, "
-       "Attendance_Rate = 88.86%, "
-       "Teacher_Quality = 3.51, ",
+       "Study Hours Per Week = 18.36, "
+       "Assignments Completed = 1.40, "
+       "Attendance Rate = 88.86%, "
+       "Teacher Quality = 3.51, ",
 
     4: "High Attendance Group: "
-       "Study_Hours_Per_Week = 17.01, "
-       "Assignments_Completed = 1.36, "
-       "Attendance_Rate = 91.29%, "
-       "Teacher_Quality = 1.63, "
+       "Study_Hours Per Week = 17.01, "
+       "Assignments Completed = 1.36, "
+       "Attendance Rate = 91.29%, "
+       "Teacher Quality = 1.63, "
 }
 
 st.subheader("Study & School Factors")
